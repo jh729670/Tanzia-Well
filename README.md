@@ -1,2 +1,6 @@
 # Tanzia-Well
 Predicting Functional Wells in Tanzia
+Using Data from DrivenData.org to help to predict Functional wells, Non functional wells, and wells that need repair. I used several models to help predict which category that wells fell into to. I first used a neural netwrok to help predict well types, but I was only getting 70% accuracy and the model was doing a poor job of classifying wells that need repair. 
+To help improve accurarcy I decided to add the longitude and latitude of the wells to help the models. I decided to use Kmeans classification of the well location to assign each well a category based upon each well's distance to the nearest centroid. Using Grid Search and Random serach for Random Forest and Neural Network, accuracy imporved slightly to about 71%, but the models did a much better job of classifying wells that need repair.
+Lastly, in one last attempt to imporve accuracy I used one-hot encoding on the target variables. I ran a Rnadom Forest Classifier on the data and accuracy did not imporve. 
+Of all of the models that were created, the Random Forest Classifier with the geo locatiosn performed the best with 71.4% accuracy and the ability to classify wells that need repairs.
